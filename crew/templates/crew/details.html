@@ -8,4 +8,5 @@
 <p>{{ employee.salary }} $</p>
 <a href="{% url 'crew:list_employee' %}">< Retour</a>
 <a href="{% url 'crew:edit_employee' employee.id %}">Modifier</a>
+<a href="{% url 'crew:delete_employee' employee.id %}">Supprimer</a>
 {% endblock %}

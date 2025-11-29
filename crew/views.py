@@ -36,3 +36,8 @@ def edit_employee(request, id):
             return redirect("crew:details", id=employee.id)
     form = EmployeeForm(instance=employee)
     return render(request, "crew/formulaire.html", {"form": form})
+
+def delete_employee(request, id):
+    employee = get_object_or_404(Employee, pk=id)
+    employee.delete()
+    return redirect("crew:list_employee")

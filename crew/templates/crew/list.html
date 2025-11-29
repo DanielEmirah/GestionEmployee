@@ -10,5 +10,6 @@
     </a>
 </h2>
 <a href="{% url 'crew:edit_employee' employee.id %}">Modifier</a>
+<a href="{% url 'crew:delete_employee' employee.id %}">Supprimer</a>
 {% endfor %}
 {% endblock %}
