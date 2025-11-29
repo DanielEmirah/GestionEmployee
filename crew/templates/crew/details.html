@@ -1,5 +1,9 @@
-{% extends "base.html" %}
+{% extends "crew/base.html" %}
 
 {% block content %}
-
+<h1>{{ employee.name }}</h1>
+<h2>{{ employee.poste }}</h2>
+<p>{{ employee.mail }}</p>
+<p>{{ employee.phone }}</p>
+<p>{{ employee.salary }} $</p>
 {% endblock %}

@@ -1,5 +1,10 @@
-{% extends "base.html" %}
+{% extends "crew/base.html" %}
 
 {% block content %}
-
+<h1>Liste des employées</h1>
+{% for employee in employees %}
+<a href="{% url 'crew:details' employee.id %}" style="text-decoration: none;">
+    <h2>{{ forloop.counter }} - {{ employee.name }} ({{ employee.poste }})</h2>
+</a>
+{% endfor %}
 {% endblock %}
