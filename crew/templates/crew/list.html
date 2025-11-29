@@ -4,8 +4,11 @@
 <h1>Liste des employées</h1>
 <a href="{% url 'crew:create_employee' %}">Créer</a>
 {% for employee in employees %}
-<a href="{% url 'crew:details' employee.id %}" style="text-decoration: none;">
-    <h2>{{ forloop.counter }} - {{ employee.name }} ({{ employee.poste }})</h2>
-</a>
+<h2>
+    <a href="{% url 'crew:details' employee.id %}" style="text-decoration: none;">
+        {{ forloop.counter }} - {{ employee.name }} ({{ employee.poste }})
+    </a>
+</h2>
+<a href="{% url 'crew:edit_employee' employee.id %}">Modifier</a>
 {% endfor %}
 {% endblock %}

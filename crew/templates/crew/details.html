@@ -7,4 +7,5 @@
 <p><a href="tel:{{ employee.phone }}">{{ employee.phone }}</a></p>
 <p>{{ employee.salary }} $</p>
 <a href="{% url 'crew:list_employee' %}">< Retour</a>
+<a href="{% url 'crew:edit_employee' employee.id %}">Modifier</a>
 {% endblock %}
