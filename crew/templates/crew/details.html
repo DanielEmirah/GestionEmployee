@@ -3,7 +3,8 @@
 {% block content %}
 <h1>{{ employee.name }}</h1>
 <h2>{{ employee.poste }}</h2>
-<p>{{ employee.mail }}</p>
-<p>{{ employee.phone }}</p>
+<p><a href="mailto:{{ employee.mail }}">{{ employee.mail }}</a></p>
+<p><a href="tel:{{ employee.phone }}">{{ employee.phone }}</a></p>
 <p>{{ employee.salary }} $</p>
+<a href="{% url 'crew:list_employee' %}">< Retour</a>
 {% endblock %}
