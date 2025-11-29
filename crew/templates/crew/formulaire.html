@@ -1,0 +1,9 @@
+{% extends "crew/base.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<a href="{% url 'crew:list_employee' %}">< Retour</a>
+{% endblock %}
